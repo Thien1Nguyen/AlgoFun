@@ -50,5 +50,17 @@ const nums = [1,1,2]
 
 
 var removeDuplicates = function(nums) {
-    
+    let map = {}
+    var zeroStartIdx = 0;
+    for (let i = 0; i < nums.length; i++) { // Setting up a for loop to itterate through nums
+        if (!map[nums[i]]) { // an if condition to check if nums[i] is in the map already, and if nums[i] is not we "push" it into the map
+            map[nums[i]] = 1;
+            nums[zeroStartIdx]=nums[i];
+            zeroStartIdx++
+        }
+    }
+        
+        return zeroStartIdx;
 };
+console.log(removeDuplicates(nums))
+console.log(nums)
