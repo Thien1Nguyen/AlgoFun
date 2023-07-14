@@ -44,4 +44,28 @@ var majorityElement = function(nums) {
     return majority 
 };
 
+
+
+//Boyer Moore's solution
+
+// var majorityElement = function(nums) {
+//     let count = 1;
+//     let major = nums[0];
+//     for (let i = 0; i < nums.length; i++){
+//         if(count === 0){
+//             count ++
+//             major = nums[i]
+//         }
+//         else if(major===nums[i]){
+//             count++;
+//         }   
+//         else{
+//             count--
+//         }
+//     }
+    
+//     return major
+// };
+
+
 console.log(majorityElement([2,2,1,1,1,2,2]))
